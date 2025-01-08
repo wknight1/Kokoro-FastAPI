@@ -35,7 +35,7 @@ services:
       - ./api/src:/app/api/src
       - ./Kokoro-82M:/app/Kokoro-82M
     ports:
-      - "8880:8880"
+      - "18880:8880"
     environment:
       - PYTHONPATH=/app:/app/Kokoro-82M
       # ONNX Optimization Settings for vectorized operations
@@ -57,7 +57,7 @@ services:
     build:
       context: ./ui
     ports:
-      - "7860:7860"
+      - "17860:7860"
     volumes:
       - ./ui/data:/app/ui/data
       - ./ui/app.py:/app/app.py  # Mount app.py for hot reload
